@@ -1,0 +1,61 @@
+@use '../../scss/' as *;
+
+.Join{
+    display: flex;
+    padding: 0 2rem;
+    gap: 10rem;
+    flex-direction: column;
+    margin-bottom: 5rem;
+}
+
+.top-j{
+    color: white;
+    font-size: 5rem;
+    font-weight: bold;
+    position: relative;
+    top: 5rem;
+    text-align: center;
+
+    .stroke-text{
+        font-size: 5.5rem;
+    }
+
+    hr{
+        width: 50%;
+        height: 0.5rem;
+        color: aqua;
+        background-color: var(--orange);
+        border: 2px solid var(--orange);
+    }
+}
+
+.bot-j{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    .email-container{
+        display: flex;
+        gap: 2rem;
+        background-color: gray;
+        padding: 1rem 2rem;
+
+        input{
+            background-color: transparent;
+            border: none;
+            color: white;
+            outline: none;
+            font-size: 1rem;
+            width: 15rem;
+        }
+
+        ::placeholder{
+            color: white;
+        }
+
+        .btn{
+            background-color: var(--orange);
+            color: white;
+        }
+    }
+}

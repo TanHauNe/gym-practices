@@ -1,0 +1,82 @@
+@use '../../scss/' as *;
+
+.Testimonials {
+    display: flex;
+    gap: 1rem;
+    padding: 0 2rem;
+}
+
+.left-t {
+    display: flex;
+    flex: 1 1;
+    gap: 2rem;
+    flex-direction: column;
+    color: white;
+
+    :nth-child(1) {
+        color: var(--orange);
+        font-weight: bold;
+    }
+
+    .stroke-text{
+        font-size: 3.5rem;
+        font-weight: bold;
+        position: relative;
+        bottom: -2rem;
+    }
+
+    :nth-child(3) {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    :nth-child(4) {
+        text-align: justify;
+        letter-spacing: 2px;
+        line-height: 40px;
+    }
+}
+
+.right-t{
+    flex: 1;
+    position: relative;
+
+    >img{
+        position: absolute;
+        width: 17rem;
+        height: 20rem;
+        object-fit: cover;
+        right: 6rem;
+        top: 2rem;
+    }
+
+    >:nth-child(1){
+        position: absolute;
+        width: 17rem;
+        height: 20rem;
+        border: 2px solid var(--orange);
+        background-color: transparent;
+        right: 7rem;
+        top: 1rem;
+    }
+
+    >:nth-child(2){
+        position: absolute;
+        width: 17rem;
+        height: 20rem;
+        background: var(--planCard);
+        right: 4rem;
+        top: 4rem;
+    }
+
+    .arrows{
+        display: flex;
+        position: absolute;
+        bottom: 0;
+
+        img{
+            width: 5rem;
+            cursor: pointer;
+        }
+    }
+}
