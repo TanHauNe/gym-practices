@@ -1,6 +1,6 @@
 @use '../../scss/' as *;
 
-.Join{
+.Join {
     display: flex;
     padding: 0 2rem;
     gap: 10rem;
@@ -8,7 +8,7 @@
     margin-bottom: 5rem;
 }
 
-.top-j{
+.top-j {
     color: white;
     font-size: 5rem;
     font-weight: bold;
@@ -16,31 +16,42 @@
     top: 5rem;
     text-align: center;
 
-    .stroke-text{
-        font-size: 5.5rem;
+    @include mobile {
+        font-size: 2rem;
     }
 
-    hr{
+    .stroke-text {
+        font-size: 5.5rem;
+        @include mobile {
+            font-size: 2.5rem;
+        }
+    }
+
+    hr {
         width: 50%;
         height: 0.5rem;
         color: aqua;
         background-color: var(--orange);
         border: 2px solid var(--orange);
+
+        @include mobile {
+            width: 100%;
+        }
     }
 }
 
-.bot-j{
+.bot-j {
     display: flex;
     justify-content: center;
     align-items: flex-end;
 
-    .email-container{
+    .email-container {
         display: flex;
         gap: 2rem;
         background-color: gray;
         padding: 1rem 2rem;
 
-        input{
+        input {
             background-color: transparent;
             border: none;
             color: white;
@@ -49,13 +60,19 @@
             width: 15rem;
         }
 
-        ::placeholder{
+        ::placeholder {
             color: white;
         }
 
-        .btn{
+        .btn {
             background-color: var(--orange);
             color: white;
+
+            &:hover {
+                background-color: white;
+                color: var(--orange);
+                border: 4px solid var(--orange);
+            }
         }
     }
 }

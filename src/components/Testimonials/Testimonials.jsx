@@ -3,8 +3,11 @@ import './Testimonials.scss';
 import { testimonialsData } from '../../data/testimonialsData';
 import leftArrow from '../../assets/leftArrow.png';
 import rightArrow from '../../assets/rightArrow.png';
+import { motion } from 'framer-motion';
 
 const Testimonials = () => {
+    const transition = { type: 'spring', duration: 3 };
+
     const [selected, setSelected] = useState(0);
     const tLength = testimonialsData.length;
 
@@ -15,7 +18,15 @@ const Testimonials = () => {
                 <span className="stroke-text">WHAT THEY</span>
                 <span>SAY ABOUT US</span>
 
-                <span>{testimonialsData[selected].review}</span>
+                <motion.span
+                    key={selected}
+                    initial={{ x: -100 }}
+                    animate={{ x: 0 }}
+                    exit={{ x: 100 }}
+                    transition={{ ...transition, duration: 2 }}
+                >
+                    {testimonialsData[selected].review}
+                </motion.span>
 
                 <span>
                     <span style={{ color: 'var(--orange)' }}>{testimonialsData[selected].name} </span>
@@ -24,10 +35,22 @@ const Testimonials = () => {
             </div>
 
             <div className="right-t">
-                <div></div>
+                <motion.div
+                    initial={{ opacity: 0, x: -100 }}
+                    transition={{ ...transition, duration: 2 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                ></motion.div>
                 <div></div>
 
-                <img src={testimonialsData[selected].image} alt="" />
+                <motion.img
+                    key={selected}
+                    initial={{ x: 100 }}
+                    animate={{ x: 0 }}
+                    exit={{ x: -100 }}
+                    transition={{ ...transition, duration: 2 }}
+                    src={testimonialsData[selected].image}
+                    alt=""
+                />
 
                 <div className="arrows">
                     <img
