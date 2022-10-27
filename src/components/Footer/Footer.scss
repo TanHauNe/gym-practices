@@ -1,0 +1,39 @@
+@use '../../scss/' as *;
+
+.Footer-container{
+    position: relative;
+}
+
+hr{
+    border: 1px solid var(--lightgray);
+}
+
+.footer{
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    .social{
+        display: flex;
+        gap: 4rem;
+
+        img{
+            width: 3rem;
+            height: 3rem;
+            cursor: pointer;
+        }
+    }
+
+    .logo img{
+        width: 10rem;
+    }
+}
+
+.footer-blur{
+    top: 0;
+    left: 35rem !important;
+}
